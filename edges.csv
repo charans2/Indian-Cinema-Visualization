@@ -1,0 +1,67 @@
+﻿source_id,source,target_id,target,relation
+nm0045393,Abhishek Bachchan,nm0706787,Aishwarya Rai Bachchan,marriage
+nm0045393,Abhishek Bachchan,nf0000821,Shweta Bachchan Nanda,sibling
+nf0000822,Ajitabh Bachchan,nf0000823,Naina Bachchan,parent-child
+nm0000821,Amitabh Bachchan,nm0045393,Abhishek Bachchan,parent-child
+nm0000821,Amitabh Bachchan,nf0000821,Shweta Bachchan Nanda,parent-child
+nm0045394,Harivansh Rai Bachchan,nf0000822,Ajitabh Bachchan,parent-child
+nm0080149,Jaya Bachchan,nm0045393,Abhishek Bachchan,parent-child
+nm0080149,Jaya Bachchan,nm0000821,Amitabh Bachchan,marriage
+nm0080149,Jaya Bachchan,nf0000821,Shweta Bachchan Nanda,parent-child
+nf0000823,Naina Bachchan,nm1577858,Kunal Kapoor,marriage
+nf0000820,Teji Bachchan,nf0000822,Ajitabh Bachchan,parent-child
+nf0000820,Teji Bachchan,nm0000821,Amitabh Bachchan,parent-child
+nf0000820,Teji Bachchan,nm0045394,Harivansh Bachchan,marriage
+nm0438463,Anil Kapoor,nm0438470,Boney Kapoor,sibling
+nm0438463,Anil Kapoor,nm7561367,Harshvardhan Kapoor,parent-child
+nm0438463,Anil Kapoor,nm3608045,Rhea Kapoor,parent-child
+nm0438463,Anil Kapoor,nm0438503,Sanjay Kapoor,sibling
+nm0438463,Anil Kapoor,nm2128238,Sonam Kapoor,parent-child
+nm0044999,Babita Kapoor,nm0004626,Kareena Kapoor,parent-child
+nm0044999,Babita Kapoor,nm0006433,Karisma Kapoor,parent-child
+nm0438470,Boney Kapoor,nm1819083,Arjun Kapoor,parent-child
+nm0438470,Boney Kapoor,nm0004437,Sridevi Kapoor,marriage
+nm0050188,Geeta Bali Kapoor,nm1216260,Kanchan Desai,parent-child
+nm0050188,Geeta Bali Kapoor,nm1207480,Aditya Raj Kapoor,parent-child
+nm0419707,Jayasudha Kapoor,nm1629078,Nitin Kapoor,marriage
+nm0420090,Jeetendra Kapoor,nm0438471,Ekta Kapoor,parent-child
+nm0420090,Jeetendra Kapoor,nf0420090,Shashi/Madhu Kapoor,sibling
+nm0420090,Jeetendra Kapoor,nm0438506,Shobha Kapoor,marriage
+nm0420090,Jeetendra Kapoor,nm0969428,Tusshar Kapoor,parent-child
+nm0447557,Jennifer Kendall,nm0004430,Karan Kapoor,parent-child
+nm0004626,Kareena Kapoor,nm0006433,Karisma Kapoor,sibling
+nm0004626,Kareena Kapoor,nm0451307,Saif Ali Khan,marriage
+nm0438481,Mahendra Kapoor,nm1225454,Rohan Kapoor,parent-child
+nm0802183,Neetu Singh Kapoor,nm1633541,Ranbir Kapoor,parent-child
+nm0004432,Prithviraj Kapoor,nm0004292,Raj Kapoor,parent-child
+nm0004432,Prithviraj Kapoor,nm0004433,Shammi Kapoor,parent-child
+nm0004432,Prithviraj Kapoor,nm0004434,Shashi Kapoor,parent-child
+nm0004292,Raj Kapoor,nf4221665,Rima Jain,parent-child
+nm0004292,Raj Kapoor,nm2049722,Krishna Kapoor,marriage
+nm0004292,Raj Kapoor,nm0196380,Randhir Kapoor,parent-child
+nm0004292,Raj Kapoor,nm0438501,Rishi Kapoor,parent-child
+nm0004292,Raj Kapoor,nf0004293,Ritu Nanda,parent-child
+nm0004292,Raj Kapoor,nm0004433,Shammi Kapoor,sibling
+nm0004292,Raj Kapoor,nm0004434,Shashi Kapoor,sibling
+nm0438497,Rajiv Kapoor,nf4221665,Rima Jain,sibling
+nm0438497,Rajiv Kapoor,nf0004293,Ritu Nanda,sibling
+nm0196380,Randhir Kapoor,nf4221665,Rima Jain,sibling
+nm0196380,Randhir Kapoor,nm0044999,Babita Kapoor,marriage
+nm0196380,Randhir Kapoor,nm0006433,Karisma Kapoor,parent-child
+nm0196380,Randhir Kapoor,nf0004293,Ritu Nanda,sibling
+nm0438501,Rishi Kapoor,nf4221665,Rima Jain,sibling
+nm0438501,Rishi Kapoor,nm0802183,Neetu Singh Kapoor,marriage
+nm0438501,Rishi Kapoor,nf0004293,Ritu Nanda,sibling
+nm0438504,Sanjana Kapoor,nm1023986,Aditya Bhattacharya,marriage
+nm0438504,Sanjana Kapoor,nm2838280,Valmik Thapar,marriage
+nm0007106,Shakti Kapoor,nm3601766,Shraddha Kapoor,parent-child
+nm0007106,Shakti Kapoor,nm4948769,Siddhanth Kapoor,parent-child
+nm0007106,Shakti Kapoor,nm2552990,Shivangi Kolhapure,marriage
+nm0004433,Shammi Kapoor,nm0050188,Geeta Bali,marriage
+nm0004433,Shammi Kapoor,nm1216260,Kanchan Desai,parent-child
+nm0004433,Shammi Kapoor,nm1207480,Aditya Raj Kapoor,parent-child
+nm0004434,Shashi Kapoor,nm0447557,Jennifer Kendal Kapoor,marriage
+nm0004434,Shashi Kapoor,nm0004430,Karan Kapoor,parent-child
+nf0420090,Sashi/Madhu Kapoor,nm0438461,Abhishek Kapoor,parent-child
+nm0004437,Sridevi Kapoor,nm9427099,Janhvi Kapoor,parent-child
+nm0438501,Rishi Kapoor,nm1633541,Ranbir Kapoor,parent-child
