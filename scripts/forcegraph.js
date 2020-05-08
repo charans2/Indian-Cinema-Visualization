@@ -171,9 +171,9 @@ function update() {
 
 // Check if any new nodes need to be added to our current list or if any nodes need to be removed
 function updateYear() {
-    for (var i = 0; i < root.id_list.length ; i++) {
-        if  (root[root.id_list[i]]) {
-            if (root[root.id_list[i]].year_entry >= year) {
+    for (var i = 0; i < root.length ; i++) {
+        if  (root[i]) {
+            if (root[i].year_entry >= year) {
                 //hide node
                 root["_" + root.id_list[i]] = root[root.id_list[i]];
                 root[root.id_list[i]] = null;
@@ -222,9 +222,9 @@ function color(d) {
 // Returns a list of all visible nodes under the root node
 function visibleNodes() {
     var temp = [];
-    for (var i = 0; i < root.id_list.length ; i++) {
-        if  (root[root.id_list[i]]) {
-            temp.push(root[root.id_list[i]]);
+    for (var i = 0; i < root.length ; i++) {
+        if(root[i]){
+            temp.push(root[i]);
         }
     }
     return temp;
