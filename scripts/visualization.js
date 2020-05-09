@@ -11,8 +11,10 @@ var width = 700,
     simuulation,
     node,
     link,
-    selected,
-    last_clicked,
+    selected_node,
+    last_clicked_node,
+    selected_link,
+    last_clicked_link,
     play = false;
 
 function init() {
@@ -52,13 +54,13 @@ function update() {
   node = node.data(visible_nodes, function(d) { return d.id; });
   node.exit().remove();
   node = node .enter().append("circle")
-              .attr("fill", "blue")
+              .attr("fill", colorNodes)
               .attr("r", 5)
               .merge(node);
   link = link.data(visible_links);
   link.exit().remove();
   link = link .enter().append("line")
-              .attr("stroke", "#000")
+              .attr("stroke", colorEdges)
               .attr("stroke-width", "2px")
               .merge(link);
   simulation.nodes(visible_nodes);
@@ -70,36 +72,69 @@ function update() {
       .on("drag", dragged)
       .on("end", dragended)
   );
-  node.on("click", click);
-  node.on("mouseover", hover).on("mouseout", unhover);
+  node.on("click", clickNode);
+  node.on("mouseover", hoverNode).on("mouseout", unhoverNode);
+  link.on("click", clickEdge);
+  link.on("mouseover", hoverEdge).on("mouseout", unhoverEdge);
 }
 
-function click(d) {
-  if (last_clicked != d) {
-    selected = d;
-    last_clicked = d;
+function clickNode(d) {
+  if (last_clicked_node != d) {
+    selected_node = d;
+    last_clicked_node = d;
     node.attr("r", function(o) {
-      return (selected.id === o.id) ? 10: 5;
+      return (selected_node.id === o.id) ? 10: 5;
     });
     displaySelected();
   } else {
-    last_clicked = null;
+    last_clicked_node = null;
   }
 }
 
-function hover(d) {
-  selected = d;
+function hoverNode(d) {
+  selected_node = d;
   node.attr("r", function(o) {
-    return (selected.id === o.id) ? 10: 5;
+    return (selected_node.id === o.id) ? 10: 5;
   });
   displaySelected();
 }
 
-function unhover(d) {
-  if (last_clicked != d) {
-    selected = null;
+function unhoverNode(d) {
+  if (last_clicked_node != d) {
+    selected_node = null;
     node.attr("r", function(o) {
       return 5;
+    });
+    displaySelected();
+  }
+}
+
+function clickEdge(d) {
+  if (last_clicked_link != d) {
+    selected_link = d;
+    last_clicked_link = d;
+    link.attr("stroke-width", function(o) {
+      return (selected_link === o) ? "4px": "2px";
+    });
+    displaySelected();
+  } else {
+    last_clicked_link = null;
+  }
+}
+
+function hoverEdge(d) {
+  selected_link = d;
+  link.attr("stroke-width", function(o) {
+    return (selected_link === o) ? "4px": "2px";
+  });
+  displaySelected();
+}
+
+function unhoverEdge(d) {
+  if (last_clicked_link != d) {
+    selected_link = null;
+    link.attr("stroke-width", function(o) {
+      return "2px";
     });
     displaySelected();
   }
@@ -190,7 +225,7 @@ function setupGraph() {
     .data(visible_links)
     .enter()
     .append("line")
-    .attr("stroke", "#000")
+    .attr("stroke", colorEdges)
     .attr("stroke-width", "2px");
   node = container.append("g").attr("class", "nodes")
     .selectAll("g")
@@ -198,7 +233,7 @@ function setupGraph() {
     .enter()
     .append("circle")
     .attr("r", 5)
-    .attr("fill", "blue")
+    .attr("fill", colorNodes)
 }
 
 function buttonClick() {
@@ -228,17 +263,58 @@ function sliderTick() {
 }
 
 function displaySelected() {
-  if (selected) {
-    d3.select("#display-id").text("ID: " + selected.id);
-    d3.select("#display-first").text("First Name: " + selected.first_name);
-    d3.select("#display-last").text("Last Name: " + selected.last_name);
-    d3.select("#display-prof").text("Profession: " + selected.prof);
-    d3.select("#display-entry").text("Entry Year: "  + selected.entry);
+  if (selected_node) {
+    d3.select("#display-first").text("First Name: " + selected_node.first_name);
+    d3.select("#display-last").text("Last Name: " + selected_node.last_name);
+    d3.select("#display-prof").text("Profession: " + selected_node.prof);
+    d3.select("#display-entry").text("Entry Year: "  + selected_node.entry);
   } else {
-    d3.select("#display-id").text("ID: ");
     d3.select("#display-first").text("First Name: ");
     d3.select("#display-last").text("Last Name: ");
     d3.select("#display-prof").text("Profession: ");
     d3.select("#display-entry").text("Entry Year: ");
+  }
+  if (selected_link) {
+    d3.select("#display-relation").text("Relation: " + selected_link.relation);
+  } else {
+    d3.select("#display-relation").text("Relation: ");
+  }
+}
+
+function colorNodes(d) {
+  var res1 = d.prof.split('/');
+  var res2 = d.prof.split(',');
+  if (res1[0] == "actor" || res2[0] == "actor") {
+    return "#3C91E6";
+  } else if (res1[0] == "director" || res2[0] == "director") {
+    return "#A2D729";
+  } else if (res1[0] == "producer" || res2[0] == "producer") {
+    return "#FA824C";
+  } else if (res1[0] == "music" || res2[0] == "music") {
+    return "#9969C7";
+  } else if (res1[0] == "relative" || res2[0] == "relative") {
+    return "#F8AC59";
+  } else {
+    return "#AA4465";
+  }
+}
+
+function colorEdges(d) {
+  var res = d.relation;
+  if (res == "sibling") {
+    return "#ECA400";
+  } else if (res == "marriage") {
+    return "#CA61C3";
+  } else if (res == "parent-child") {
+    return "#DA2647";
+  } else {
+    return "#000000";
+  }
+}
+
+function searchClick() {
+  if (selected_node) {
+    var search = selected_node.name.replace(/ /g, "+");
+    window.open('http://www.google.com/search?q=' + search, "_blank");
   }
 }

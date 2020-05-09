@@ -26,14 +26,34 @@
           <svg id="graph"> </svg>
         </td>
         <td id="graph-small">
-          <div id="node-display">
             <p id="display-title"> Selected Node </p>
-            <p id="display-id"> ID: </p>
             <p id="display-first"> First Name: </p>
             <p id="display-last"> Last Name: </p>
             <p id="display-prof"> Profession: </p>
             <p id="display-entry"> Entry Year: </p>
-          </div>
+            <div id="search-wrapper">
+              <button type="button" onclick="searchClick()" id="search">Google Search</button>
+            </div>
+            <p id="display-title"> Selected Edge </p>
+            <p id="display-relation"> Relation: </p>
+            <p id="display-title"> Legend </p>
+            <ul id="legend">
+              <li><span class="legend-node" id="actor"></span> Actor </li>
+              <li><span class="legend-edge" id="sibling"></span> Sibling </li>
+              <br>
+              <li><span class="legend-node" id="director"></span> Director </li>
+              <li><span class="legend-edge" id="marriage"></span> Marriage </li>
+              <br>
+              <li><span class="legend-node" id="producer"></span> Producer </li>
+              <li><span class="legend-edge" id="parent-child"></span> Parent-Child </li>
+              <br>
+              <li><span class="legend-node" id="music"></span> Music </li>
+              <li><span class="legend-edge" id="other-edge"></span> Other </li>
+              <br>
+              <li><span class="legend-node" id="relative"></span> Relative </li>
+              <br>
+              <li><span class="legend-node" id="other-node"></span> Other </li>
+            </ul>
         </td>
       </tr>
     </table>

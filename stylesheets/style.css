@@ -77,12 +77,13 @@ body {
   text-align: left;
   width: 300px;
   height: 500px;
-}
-
-#node-display p {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   color: #00008b;
+}
+
+#graph-small p {
+  margin-top: 12px;
 }
 
 #display-title {
@@ -107,3 +108,64 @@ body {
 #button:hover {
   box-shadow: 0 3px 4px 0 rgba(0,0,0,0.24), 0 5px 10px 0 rgba(0,0,0,0.18);
 }
+
+#search-wrapper {
+  text-align: center;
+}
+
+#search {
+  font-size: 14px;
+  border: none;
+  background-color: #00008b;
+  color: #ffffff;
+  padding: 8px 24px;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 8px;
+}
+
+#search:hover {
+  box-shadow: 0 3px 4px 0 rgba(0,0,0,0.24), 0 5px 10px 0 rgba(0,0,0,0.18);
+}
+
+#legend {
+  font-size: 12px;
+  list-style: none;
+}
+
+#legend li {
+  float: left;
+  width: 85px;
+  margin-right: 10px;
+}
+
+#legend .legend-node {
+  border: 1px solid #000;
+  border-radius: 50%;
+  float: left;
+  width: 8px;
+  height: 8px;
+  margin-top: 3px;
+  margin-right: 5px;
+}
+
+#legend #actor { background-color: #3C91E6; }
+#legend #director { background-color: #A2D729; }
+#legend #producer { background-color: #FA824C; }
+#legend #music { background-color: #9969C7; }
+#legend #relative { background-color: #F8AC59; }
+#legend #other-node { background-color: #AA4465; }
+
+#legend .legend-edge {
+  border: 1px solid #000;
+  float: left;
+  width: 8px;
+  height: 2px;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+#legend #sibling { background-color: #ECA400; }
+#legend #marriage { background-color: #CA61C3; }
+#legend #parent-child { background-color: #DA2647; }
+#legend #other-edge { background-color: #000000; }
