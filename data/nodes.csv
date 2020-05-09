@@ -1,4 +1,4 @@
-Id,Name,lastname,firstname,Prof,year_entry,Size,P1,P2,P3
+id,name,last_name,first_name,prof,entry,size,p1,p2,p3
 nm6549376,Azhagappan A. L.,A. L.,Azhagappan,actor,2000,0,actor,,
 nm1777967,Vijay A. L.,A. L.,Vijay,director/other,2000,0,director,other,
 nm1436693,Murugadoss A.R.,A.R.,Murugadoss,director/producer/other,2001,0,director,producer,other
@@ -165,7 +165,6 @@ nm4593407,Anandan C. L.,C. L.,Anandan,actor,1953,0,actor,,
 nm3002347,Mahaakshay Chakraborty,Chakraborty,Mahaakshay,actor,2007,0,actor,,
 nm0149822,Mithun Chakraborty,Chakraborty,Mithun,actor,1974,0,actor,,
 nm1202244,Chandrahasan,Chandrahasan,,other/director/actor,1979,0,other,director,actor
-nm5263646,Viji Chandrashekhar,Chandrashekhar,Viji,actor,0,0,actor,,
 nm0151293,Leena Chandravarkar,Chandravarkar,Leena,actor,1969,0,actor,,
 nm0084428,Biswajit Chatterjee,Chatterjee,Biswajit,actor,1958,0,actor,,
 nm0154146,Prosenjit Chatterjee,Chatterjee,Prosenjit,actor,1968,0,actor,,

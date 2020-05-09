@@ -1,204 +1,171 @@
-/* Theme of the website : rgb(53,122,105)*/
-/*-------------------------Generic CSS for entire page------------------------*/
 body {
-    font-family: 'Lato', sans-serif;
-}
-
-h3 {
-    margin-top: 15px;
+  font-family: sans-serif;
 }
 
 #title {
-	font-size: 28px;
-    font-weight: 100;
-    text-align: center;
-    color: #047c68;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  color: #00008b;
 }
 
-
-/*---------------------------Components in Title Bar--------------------------*/
-#title-bar {
-    margin-top:2%;
+#slider-wrapper {
+  text-align: center;
 }
 
-.button-holder {
-    align-items:center;
-    text-align:center;
-}
-
-#my-button {
-    outline-color:rgb(53,122,105);
-    background-color:rgb(53,122,105);
-    border-color:rgb(53,122,105);
-}
-
-#my-button:hover{
-    color:rgb(53,122,105);
-    background-color:rgb(255,255,255);
-    border-color:rgb(53,122,105);
-}
-
-#my-button:active{
-    outline-color:rgb(53,122,105) !important;
-    background-color:rgb(53,122,105) !important;
-    border-color:rgb(53,122,105) !important;
-    color: rgb(255,255,255) !important;
-}
-
-#my-button:focus{
-    outline-color:rgb(53,122,105);
-    background-color:rgb(53,122,105);
-    border-color:rgb(53,122,105);
-}
-
-
-/*------------------------------Left Box Components---------------------------*/
-#left {
-    padding: 2.1%;
-}
-
-#infoPara {
-    font-size: 15px;
-    text-align: justify;
-    padding:5%;
-}
-
-
-/*----------------------------Year Display Components-------------------------*/
-#year {
-    margin-top: 8%;
-}
-
-#yeartext {
-    margin-left:25%;
-}
-
-#yeardiv {
-    margin-left: 10%;
-    text-align: right;
-}
-
-#yearbox {
-	font-size: 28px;
-    text-align: right;
-    color: #000000;
-}
-
-
-/*-----------------------------Slider Bar Component---------------------------*/
-.slidecontainer {
-  width: 100%;
-}
-
-.slider {
+#slider {
   -webkit-appearance: none;
-  appearance: none;
-  width: 100%;
-  height: 25px;
-  background: rgb(200,200,200);
+  width: 500px;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
   outline: none;
-  opacity: 0.8;
+  opacity: 0.7;
   -webkit-transition: .2s;
   transition: opacity .2s;
 }
 
-.slider:hover {
-  opacity: 1;
-}
-
-.slider::-webkit-slider-thumb {
+#slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 25px;
   height: 25px;
-  background: rgb(53,122,105);
+  border-radius: 50%;
+  background: #00008b;
   cursor: pointer;
 }
 
-.slider::-moz-range-thumb {
+#slider::-moz-range-thumb {
   width: 25px;
   height: 25px;
-  background: rgb(53,122,105);
+  border-radius: 50%;
+  background: #00008b;
   cursor: pointer;
 }
 
-
-/*------------------------------Legend Components-----------------------------*/
-.legend {
-    margin-top:30px;
+#slider-label {
+  font-size: 20px;
+  color: #00008b;
 }
 
-.legend-item {
-    margin-top:4px;
+#graph-wrapper {
+  padding: 5px;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+  height: 500px;
+  border: 5px;
+  background: #bbbbbb;
 }
 
-.legend-item-name {
-    margin: 6%;
-}
-
-
-/*----------------------------Force Graph Components--------------------------*/
-#chart {
-  padding-left: 10%;
-}
-
-#chart div {
-  font: 10px sans-serif;
-  background-color: rgb(53,122,105);
+#graph-large {
   text-align: center;
-  padding: 3px;
-  margin: 1px;
-  color: white;
-  overflow-x: auto;
-  overflow-y: auto;
+  width: 700px;
+  height: 500px;
 }
 
-.node {
-    cursor: pointer;
+#graph {
+  width: 700px;
+  height: 500px;
+  background: #d3d3d3;
 }
 
-
-/*-------------------------Colours for Nodes and Links------------------------*/
-.Actor { background: #3C91E6;}
-.Director { background: #A2D729;}
-.Producer { background: #FA824C;}
-.Music { background: #CCCCCC;}
-.Relative { background: #F8AC59;}
-.Other { background: #AA4465;}
-.Sibling-Relationship { background: #ECA400;}
-.Marriage-Relationship { background: #CA61C3;}
-.Parent-Child-Relationship { background: #DA2647;}
-.link {
-	fill: none;
-	stroke: #000000;
-	stroke-width: 1px;
+#graph-small {
+  padding-left: 25px;
+  padding-right: 25px;
+  text-align: left;
+  width: 300px;
+  height: 500px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #00008b;
 }
 
-/*----------------------------Name Box on Hover-------------------------------*/
-div.tooltip {
-    position: absolute;
-    text-align: center;
-    vertical-align:center;
-    width: 70px;
-    height: 40px;
-    padding: 2px;
-    font: 12px sans-serif;
-    background: rgb(53,122,105);
-    border: 0px;
-    border-radius: 8px;
-    pointer-events: none;
+#graph-small p {
+  margin-top: 12px;
 }
 
-.key-dot {
-    display: inline-block;
-    height: 10px;
-    margin-right: .5em;
-    width: 10px;
+#display-title {
+  font-size: 20px !important;
+  text-align: center !important;
+  font-weight: bold !important;
 }
 
-.key-line {
-    display: inline-block;
-    height: 3px;
-    margin-right: .5em;
-    width: 5px;
+#button {
+  font-size: 16px;
+  border: none;
+  background-color: #00008b;
+  color: #ffffff;
+  padding: 8px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 50px;
+  border-radius: 8px;
 }
+
+#button:hover {
+  box-shadow: 0 3px 4px 0 rgba(0,0,0,0.24), 0 5px 10px 0 rgba(0,0,0,0.18);
+}
+
+#search-wrapper {
+  text-align: center;
+}
+
+#search {
+  font-size: 14px;
+  border: none;
+  background-color: #00008b;
+  color: #ffffff;
+  padding: 8px 24px;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 8px;
+}
+
+#search:hover {
+  box-shadow: 0 3px 4px 0 rgba(0,0,0,0.24), 0 5px 10px 0 rgba(0,0,0,0.18);
+}
+
+#legend {
+  font-size: 12px;
+  list-style: none;
+}
+
+#legend li {
+  float: left;
+  width: 85px;
+  margin-right: 10px;
+}
+
+#legend .legend-node {
+  border: 1px solid #000;
+  border-radius: 50%;
+  float: left;
+  width: 8px;
+  height: 8px;
+  margin-top: 3px;
+  margin-right: 5px;
+}
+
+#legend #actor { background-color: #3C91E6; }
+#legend #director { background-color: #A2D729; }
+#legend #producer { background-color: #FA824C; }
+#legend #music { background-color: #9969C7; }
+#legend #relative { background-color: #F8AC59; }
+#legend #other-node { background-color: #AA4465; }
+
+#legend .legend-edge {
+  border: 1px solid #000;
+  float: left;
+  width: 8px;
+  height: 2px;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+#legend #sibling { background-color: #ECA400; }
+#legend #marriage { background-color: #CA61C3; }
+#legend #parent-child { background-color: #DA2647; }
+#legend #other-edge { background-color: #000000; }
