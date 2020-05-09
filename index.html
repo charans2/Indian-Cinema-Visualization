@@ -8,6 +8,7 @@
     <script src="https://unpkg.com/d3-simple-slider"></script>
     <script src="./scripts/visualization.js"></script>
     <link rel="stylesheet" type="text/css" href="./stylesheets/style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon"/>
   </head>
 
   <body>
@@ -15,12 +16,27 @@
     <h1 id="title"> Indian Cinema Visualization </h1>
     <div id="slider-wrapper">
       <label for="slider" id="slider-label"> Year: </label>
+      <button type="button" onclick="buttonClick()" id="button">Play</button>
       <br> <br>
       <input type="range" name="slider" id="slider">
     </div>
-    <div id="graph-wrapper">
-      <svg id="graph"> </svg>
-    <div>
+    <table id="graph-wrapper">
+      <tr>
+        <td id="graph-large">
+          <svg id="graph"> </svg>
+        </td>
+        <td id="graph-small">
+          <div id="node-display">
+            <p id="display-title"> Selected Node </p>
+            <p id="display-id"> ID: </p>
+            <p id="display-first"> First Name: </p>
+            <p id="display-last"> Last Name: </p>
+            <p id="display-prof"> Profession: </p>
+            <p id="display-entry"> Entry Year: </p>
+          </div>
+        </td>
+      </tr>
+    </table>
   </body>
 
 </html>
